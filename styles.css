@@ -69,3 +69,16 @@
 .text-weight {
   font-weight: 400;
 }
+
+.i-colour {
+  color: #ffc107;
+}
+
+.submit {
+  border: none;
+}
+
+.scrolling {
+  background: black;
+  opacity: 80%;
+}
