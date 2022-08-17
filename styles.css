@@ -80,5 +80,6 @@
 
 .scrolling {
   background: black;
-  opacity: 80%;
+  opacity: 90%;
+  transition: all 0.5s;
 }

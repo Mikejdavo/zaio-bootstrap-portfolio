@@ -74,8 +74,6 @@
     
   </head>
   <body class="bg-light ">
-<div class="banner-wrap vh-100 vw-100 text-white">
-  <div class="overlay"></div>
   <header class="px-5 p-3 text-white fixed-top">
     <div class="fw-semibold">
       <h3 class="float-md-start text-center">Portfolio</h3>
@@ -87,10 +85,12 @@
       </nav>
     </div>
   </header>
+  <div class="banner-wrap vh-100 vw-100 d-flex align-items-center justify-content-center text-white">
+  <div class="overlay"></div>
 
-  <main class="d-flex flex-column align-items-center justify-content-center h-100 text-center">
+  <main class="text-center">
     <h1 class="display-1">I am Michael John Davidson.</h1>
-    <p class="lead mx-5">Coding enthusiast, building my full stack skill set daily.</p>
+    <span id="typed" class="lead"></span>
   </main>
   </div>
 
@@ -196,7 +196,7 @@
             <h1 class>Let's Connect!</h1>
             <p class="lead fw-normal">Especially if you're a fellow dev, an employer looking for devs, or looking to get web development work done.</p>
           </div>
-          <div class="col-md-8 col-sm-10 mx-auto">
+          <!-- <div class="col-md-8 col-sm-10 mx-auto">
           <form>
             <div class="mb-3">
               <input type="email" class="form-control my-3" id="email" placeholder="Enter email address">
@@ -212,7 +212,7 @@
             </div>
             <button type="submit" class="btn btn-primary text-bg-warning submit">Submit</button>
           </form>
-        </div>
+        </div> -->
         <p class="fs-2 text-center">
           <a href="https://www.linkedin.com/in/michaeljohndavidson/" target="_blank" class=" i-colour"><i class="bi bi-linkedin m-2"></i></a>
           <a href="https://github.com/Mikejdavo" class=" i-colour"><i class="bi bi-github m-2" target="_blank"></i></a>
@@ -222,10 +222,26 @@
       </div>
     </section>
 
+    <footer class="bg-dark text-white text-center">
+      <div class="container p-3">
+        <p class="lead">Developed by Michael John Davidson</p>
+      </div>
+    </footer>
+
     <script>
       window.addEventListener("scroll", () => {
-
+        const header = document.querySelector("header")
+        header.classList.toggle("scrolling", window.scrollY > 0)
       }) 
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed('#typed', {
+        strings: ['Coding enthusiast.', 'Building my full stack skill set.'],
+        loop: true,
+        typeSpeed: 70,
+      });
     </script>
 
   </body>
